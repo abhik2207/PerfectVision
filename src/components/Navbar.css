@@ -1,0 +1,116 @@
+#navbar {
+    height: 10vh;
+    width: 100%;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0vmax 3vmax;
+}
+
+#nav-left {
+    width: 30%;
+    height: 100%;
+}
+
+#nav-logo {
+    width: 4vmax;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#nav-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+#nav-center {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav-center > .link {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.95vmax;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#nav-right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1vmax;
+}
+
+#nav-right > button {
+    padding: 0.75vmax 1.2vmax;
+    border-radius: 500px;
+    /* background-color: #FE330A; */
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+    /* transition: 0.3s; */
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+#nav-right > button > a {
+    font-weight: 500;
+    font-size: 0.8vmax;
+    color: #000;
+    text-decoration: none;
+    z-index: 3;
+    position: relative;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+}
+
+#nav-right > button::after {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background-color: #FE330A;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+    border-radius: 50%;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+#nav-right>button:hover a {
+    color: #fff;
+}
+
+#nav-right>button:hover::after {
+    top: 0vmax;
+    left: 15%;
+    transform: scale(2);
+}
+
+#profile-button {
+    width: 3.25vmax;
+    height: 3.25vmax;
+    border-radius: 100%;
+}
+
+#profile-button > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
