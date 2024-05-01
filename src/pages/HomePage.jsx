@@ -2,17 +2,20 @@ import Navbar from '../components/Navbar';
 import './HomePage.css';
 import heroSectionWallpaper from '../assets/hero-wallpaper.jpg';
 
+// Swiper dependencies
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
+// Image imports
 import Amblyopia from '../assets/amblyopia.jpeg';
 import LazyEye from '../assets/lazy-eye.jpg';
 import EyeStrain from '../assets/eye-strain.jpg';
 import ScleralLensAdjustment from '../assets/scleral-lens-adjustment.png';
 import PostSurgerySupport from '../assets/post-surgery-support.jpg';
+import EyeImage from '../assets/eye.webp';
 
 const diseases = [
     {
@@ -61,8 +64,7 @@ function HomePage() {
             <div id="page2">
                 <h1>DISEASES WE DEAL IN</h1>
                 <div id="swiper-div">
-                    <div id="swiper-div-gradient-layer">
-                    </div>
+                    <div id="swiper-div-gradient-layer" />
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
@@ -80,10 +82,10 @@ function HomePage() {
                         className="mySwiper"
                     >
                         {diseases.map((disease, index) => (
-                            <SwiperSlide className='mySwiperSlide' key={index} style={{display:"flex"}}>
+                            <SwiperSlide className='mySwiperSlide' key={index} style={{ display: "flex" }}>
                                 <div className="slide-left">
                                     <div className="slide-image-container">
-                                        <img src={disease.image} />
+                                        <img src={disease.image} alt={disease.name} />
                                     </div>
                                 </div>
                                 <div className="slide-right">
@@ -93,6 +95,37 @@ function HomePage() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+            </div>
+            <div id="page3">
+                <div id="page3-left">
+                    <div id="page3-image-container">
+                        <img src={EyeImage} alt="Page 3 Image" />
+                        <div className="box box1">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo nihil corporis veritatis voluptatibus nostrum asperiores.</p>
+                        </div>
+                        <div className="box box2">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, laudantium accusantium quidem illo libero consequuntur minima aliquid cum magnam facere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page3-right">
+                    <h4>some descriptor here</h4>
+                    <h1>Main heading here</h1>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="page4">
+                <h1>HAPPY CUSTOMERS</h1>
+                <div id="grid">
+                    <div className="row">
+                        <div className="cell"></div>
+                    </div>
                 </div>
             </div>
         </div>
