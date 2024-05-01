@@ -1,7 +1,6 @@
 #navbar {
     height: 10vh;
     width: 100%;
-    background-color: lightskyblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +13,7 @@
 }
 
 #nav-logo {
-    width: 4vmax;
+    width: 3.25vmax;
     height: 100%;
     display: flex;
     align-items: center;
@@ -42,6 +41,12 @@
     font-size: 0.95vmax;
     font-weight: 600;
     cursor: pointer;
+    color: #000000;
+    transition: 0.3s;
+}
+
+#nav-center > .link:hover {
+    color: #FE330A;
 }
 
 #nav-right {
@@ -56,11 +61,9 @@
 #nav-right > button {
     padding: 0.75vmax 1.2vmax;
     border-radius: 500px;
-    /* background-color: #FE330A; */
     background-color: transparent;
     color: #000;
     border: 2px solid #000;
-    /* transition: 0.3s; */
     outline: none;
     cursor: pointer;
     overflow: hidden;

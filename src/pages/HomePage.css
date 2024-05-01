@@ -1,5 +1,112 @@
 #home-page {
     height: 100vh;
     width: 100%;
-    background-color: rgb(179, 179, 179);
+}
+
+#hero-section {
+    height: 90vh;
+    width: 100%;
+}
+
+#hero-gradient-layer {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, transparent, #EFEAE3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0vmax 3vmax;
+}
+
+#hero-gradient-layer > h1 {
+    font-size: 5vmax;
+    font-weight: 900;
+    width: 40%;
+    color: #FE330A;
+}
+
+#hero-gradient-layer > p {
+    font-size: 1vmax;
+    font-weight: 400;
+    width: 50%;
+    color: #000000;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vmax;
+}
+
+#page2 > h1 {
+    font-size: 4vmax;
+    font-weight: 800;
+}
+
+#swiper-div {
+    width: 90vmax;
+    height: 30vmax;
+    position: relative;
+}
+
+#swiper-div-gradient-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #efeae3, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #efeae3);
+    z-index: 5;
+    pointer-events: none;
+    /* background-color: #EFEAE3; */
+}
+
+.mySwiper {
+    height: 100%;
+    width: 100%;
+}
+
+.mySwiperSlide {
+    background-color: #FE330A;
+    max-height: 90%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.slide-image-container {
+    width: 14vmax;
+    height: 14vmax;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.slide-image-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-right {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vmax;
+    gap: 1vmax;
 }
