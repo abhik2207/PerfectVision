@@ -1,0 +1,61 @@
+#pricing-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #d1eaff;
+}
+
+#pricing {
+    height: 65vh;
+    display: flex;
+    padding: 0vmax 3vmax;
+}
+
+#pricing-left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 2vmax;
+}
+
+#pricing-left > h1 {
+    font-size: 8vmax;
+    font-weight: 700;
+    color: #005696;
+}
+
+
+#pricing-left > p {
+    font-size: 1.75vmax;
+    font-weight: 400;
+    color: #005696;
+}
+
+#pricing-right {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2vmax;
+}
+
+#pricing-right > h1 {
+    font-size: 1.75vmax;
+    font-weight: 400;
+    color: #005696;
+    margin-bottom: 1vmax;
+}
+
+#pricing-right > ul {
+    margin-left: 1vmax;
+    margin-bottom: 0.5vmax;
+}
+
+#pricing-right > ul > li {
+    font-size: 0.9vmax;
+    margin-bottom: 0.6vmax;
+}

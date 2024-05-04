@@ -1,0 +1,83 @@
+#footer {
+    height: 25vh;
+    width: 100%;
+    background-color: #012d57;
+    padding: 0vmax 3vmax;
+    box-shadow: 0px 0px 50px #00000086;
+}
+
+#footer-top {
+    height: 70%;
+    width: 100%;
+    display: flex;
+}
+
+#footer-top h1 {
+    font-size: 1.5vmax;
+    color: #a9d8ff;
+    margin-bottom: 0.8vmax;
+}
+
+#footer-top p, #footer-top .link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95vmax;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#footer-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#footer-left > img {
+    height: 50%;
+    width: 5vmax;
+}
+
+#footer-center {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer-right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#footer-bottom {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff4d;
+}
+
+#images > a {
+    text-decoration: none;
+}
+
+#images > a > img {
+    height: 2vmax;
+    width: 2vmax;
+    cursor: pointer;
+    margin-right: 1.5vmax;
+}
+
+#copyright > p {
+    color: #ffffff8c;
+}

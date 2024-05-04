@@ -13,7 +13,7 @@
 }
 
 #nav-logo {
-    width: 3.25vmax;
+    width: 4vmax;
     height: 100%;
     display: flex;
     align-items: center;
@@ -37,7 +37,6 @@
 
 #nav-center > .link {
     text-decoration: none;
-    color: #000;
     font-size: 0.95vmax;
     font-weight: 600;
     cursor: pointer;
@@ -46,7 +45,7 @@
 }
 
 #nav-center > .link:hover {
-    color: #FE330A;
+    color: #0376c0;
 }
 
 #nav-right {
@@ -86,12 +85,12 @@
     position: absolute;
     height: 300%;
     width: 100%;
-    background-color: #FE330A;
+    background-color: #0376c0;
     left: 50%;
     top: 100%;
     transform: translate(-50%, 0%);
-    border-radius: 50%;
-    transition: 0.4s;
+    border-radius: 45%;
+    transition: 0.5s;
     pointer-events: none;
 }
 

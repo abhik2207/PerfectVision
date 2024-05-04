@@ -1,5 +1,5 @@
 import './Navbar.css';
-import NavbarLogo from '../assets/vision.png';
+import NavbarLogo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import UserLogo from '../assets/user.png';
 
