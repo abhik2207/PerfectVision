@@ -1,0 +1,117 @@
+#about-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#about-section {
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    padding: 3vmax 10vmax;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-section .image-container {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75vmax;
+}
+
+#about-left {
+    width: 45%;
+    height: 137.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-left > .about-top > h1 {
+    font-size: 3.5vmax;
+    font-weight: 800;
+    margin-bottom: 1vmax;
+    color: #FE330A;
+}
+
+#about-left > .about-top > h2 {
+    font-size: 1.2vmax;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: #fe330a75;
+}
+
+#about-left > .about-top > p {
+    font-size: 0.85vmax;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 2vmax;
+}
+
+#about-left > .about-bottom > h1 {
+    font-size: 3.5vmax;
+    font-weight: 800;
+    margin-top: 5vmax;
+    margin-bottom: 1vmax;
+}
+
+#about-left > .about-bottom > p {
+    font-size: 0.85vmax;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 2vmax;
+}
+
+#about-left > .about-top > .image-container > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#about-right {
+    width: 45%;
+    height: 137.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#about-right > .about-top > h1 {
+    font-size: 3.5vmax;
+    font-weight: 800;
+    margin-bottom: 1vmax;
+    color: #FE330A;
+}
+
+#about-right > .about-top > h2 {
+    font-size: 1.2vmax;
+    font-weight: 600;
+    margin-top: 5vmax;
+    letter-spacing: 10px;
+    color: #fe330a75;
+}
+
+#about-right > .about-top > p {
+    font-size: 0.85vmax;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 2vmax;
+}
+
+#about-right > .about-bottom > h1 {
+    font-size: 3.5vmax;
+    font-weight: 800;
+    margin-bottom: 1vmax;
+}
+
+#about-right > .about-bottom > p {
+    font-size: 0.85vmax;
+    font-weight: 400;
+    text-align: justify;
+    margin-bottom: 2vmax;
+}
+
+#about-right > .about-top > .image-container > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

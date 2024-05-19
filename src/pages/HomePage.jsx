@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import './HomePage.css';
-import heroSectionWallpaper from '../assets/hero_wallpaper_1.png';
+import heroSectionWallpaper from '../assets/hero_wallpaper.png';
 
 // Swiper dependencies
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,11 +10,11 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 // Image imports
-import Amblyopia from '../assets/amblyopia.jpeg';
-import LazyEye from '../assets/lazy-eye.jpg';
-import EyeStrain from '../assets/eye-strain.jpg';
-import ScleralLensAdjustment from '../assets/scleral-lens-adjustment.png';
-import PostSurgerySupport from '../assets/post-surgery-support.jpg';
+import Amblyopia from '../assets/3.png';
+import EyeTrackingProblem from '../assets/4.png';
+import EyeStrain from '../assets/5.png';
+import ScleralLensAdjustment from '../assets/6.png';
+import PostSurgerySupport from '../assets/7.png';
 import EyeImage from '../assets/eye.webp';
 import Footer from '../components/Footer';
 
@@ -22,26 +22,31 @@ const diseases = [
     {
         image: Amblyopia,
         name: "Amblyopia",
+        imagePosition: 'center',
         description: "Amblyopia, often called lazy eye, is a condition where one eye doesn't develop proper vision during childhood. This happens when the brain favors the stronger eye, causing the weaker eye to become blurry. It's most common in children under 7 and can lead to permanent vision loss if untreated. Causes include eye misalignment (strabismus), unequal eye strength, or blocked vision in one eye (cataract). Early diagnosis and treatment, often with patching the stronger eye, can strengthen the weaker eye's vision."
     },
     {
-        image: LazyEye,
-        name: "Lazy eye",
+        image: EyeTrackingProblem,
+        name: "Eye-Tracking Problems",
+        imagePosition: 'top',
         description: "Lazy eye, also known as amblyopia, occurs when one eye develops weaker vision due to abnormal connections between the brain and that eye in early childhood. This can happen because the eye is misaligned (wanders), has uncorrected blurry vision, or experiences other vision problems. The brain favors the stronger eye, further weakening the 'lazy' eye's vision. Early diagnosis and treatment with patching or special lenses are crucial to prevent permanent vision loss."
     },
     {
         image: EyeStrain,
         name: "Eye strain",
+        imagePosition: 'center',
         description: "Eye strain is a temporary discomfort caused by focusing intensely for long periods, often on digital screens. It leads to tired, burning, or itchy eyes, blurred vision, headaches, and light sensitivity. While not serious, it can disrupt daily activities. Resting your eyes, blinking frequently, and taking breaks from screens can help prevent and ease symptoms."
     },
     {
         image: ScleralLensAdjustment,
         name: "Scleral lens adjustment",
+        imagePosition: 'top',
         description: "Scleral lens adjustment is a meticulous process performed by an eye specialist to ensure a perfect fit. It involves fine-tuning the lens diameter, base curve, and edge design to comfortably vault over the cornea and rest on the sclera. This creates a tear reservoir for optimal vision correction while ensuring proper clearance to avoid irritation or blood flow blockage on the eye's surface. The goal is to achieve a secure, comfortable lens that provides clear vision and long-term eye health benefits."
     },
     {
         image: PostSurgerySupport,
         name: "Post surgery support",
+        imagePosition: 'top',
         description: "Post-surgery support encompasses all the care a patient receives after surgery to ensure a smooth recovery. This includes meticulous wound care, pain management through medication and strategies, physical therapy for regaining strength and mobility, and emotional support from healthcare professionals, family, or home care services, depending on the surgery's complexity and the patient's individual needs. This comprehensive support system plays a crucial role in maximizing healing, preventing complications, and facilitating a successful return to daily life."
     }
 ];
@@ -90,11 +95,12 @@ function HomePage() {
             <div id="hero-section">
                 <div id="hero-gradient-layer">
                     <h1>HEALTHY EYES, HAPPY YOU</h1>
-                    <p>{"Do you ever feel like one of your eyes isn't quite pulling its weight? Does it sometimes drift inward or outward, causing double vision or blurry images? If so, you might be experiencing a lazy eye, a condition where one eye weakens over time. But don't worry, you're not alone! Here at Perfect Vision, we understand the challenges of lazy eye and offer a range of solutions to help you regain clear, comfortable vision. Whether you're seeking natural exercises, vision therapy techniques, or information on potential treatments, we're here to guide you on your path to stronger, balanced vision."}</p>
+                    <p>{"Perfect Vision offers a captivating and highly effective method for addressing vision problems. This innovative solution involves playing interactive games on a tablet or computer that you already own, eliminating the need for any extra equipment."}</p>
                 </div>
             </div>
             <div id="page2">
-                <h1>DISEASES WE DEAL IN</h1>
+                <h1>Clear Vision, Brighter Future with Perfect Vision!</h1>
+                <p>Perfect Vision offers an excellent solution for addressing vision problems such as:</p>
                 <div id="swiper-div">
                     <div id="swiper-div-gradient-layer" />
                     <Swiper
@@ -114,8 +120,8 @@ function HomePage() {
                         className="mySwiper"
                     >
                         {diseases.map((disease, index) => (
-                            <SwiperSlide className='mySwiperSlide' key={index} style={{ display: "flex" }}>
-                                <div className="slide-left">
+                            <SwiperSlide className='mySwiperSlide' style={{ backgroundImage: `url(${disease.image})`, backgroundRepeat: 'no-repeat', backgroundPosition: `${disease.imagePosition}`, backgroundSize: 'cover', display: 'flex' }} key={index}>
+                                {/* <div className="slide-left">
                                     <div className="slide-image-container">
                                         <img src={disease.image} alt={disease.name} />
                                     </div>
@@ -123,6 +129,11 @@ function HomePage() {
                                 <div className="slide-right">
                                     <h1>{disease.name}</h1>
                                     <p>{disease.description}</p>
+                                </div> */}
+
+                                <div className="swiperSlideMasker">
+
+                                    <h1>{disease.name}</h1>
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -134,31 +145,38 @@ function HomePage() {
                     <div id="page3-image-container">
                         <img src={EyeImage} alt="Page 3 Image" />
                         <div className="box box1">
-                            <div className="box-left">
-                                <h1>4+</h1>
+                            <div className="box-up">
+                                <p>Globally</p>
                             </div>
-                            <div className="box-right">
-                                <p>years of experiencing</p>
+                            <div className="box-down">
+                                <div className="box-left">
+                                    <h1>1.36%</h1>
+                                </div>
+                                <div className="box-right">
+                                    <p>of children have lazy eye globally.</p>
+                                </div>
                             </div>
                         </div>
                         <div className="box box2">
-                            <div className="box-left">
-                                <h1>100+</h1>
+                        <div className="box-up">
+                                <p>Roughly</p>
                             </div>
-                            <div className="box-right">
-                                <p>satisfied customers</p>
+                            <div className="box-down">
+                                <div className="box-left">
+                                    <h1>3%</h1>
+                                </div>
+                                <div className="box-right">
+                                    <p>of population is affected by Amblyopia.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="page3-right">
-                    <h4>some descriptor here</h4>
-                    <h1>Main heading here</h1>
+                    <h4>See the Difference with Simple Vision Training</h4>
+                    <h1>Tired of blurry vision holding you back?</h1>
                     <ol>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis exercitationem et voluptatem quam doloribus, ab enim incidunt non nam.</li>
+                        <li>Ditch the eye doctor visits and strengthen your vision from the comfort of your couch! Perfect Vision uses fun and interactive games to tackle common vision problems like lazy eye, crossed eyes, and double vision. Just a few minutes a day playing these games at home can help you see better, just like thousands of others who have trusted Perfect Vision to improve their sight.</li>
                     </ol>
                 </div>
             </div>
