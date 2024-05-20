@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #c42809;
+    background-color: var(--primary-color-dark);
     padding: 0vmax 3vmax;
     box-shadow: 0px 0px 50px #000000a6;
 }
@@ -15,7 +15,7 @@
 }
 
 #footer-top h1 {
-    color: #EFEAE3;
+    color: var(--secondary-color);
     font-size: 1.4vmax;
     font-weight: 800;
     margin-bottom: 0.5vmax;
@@ -56,7 +56,7 @@
 #footer1a > p {
     font-size: 1.5vmax;
     font-weight: 600;
-    color: #EFEAE3;
+    color: var(--secondary-color);
 }
 
 #footer1b {
@@ -70,7 +70,7 @@
 #footer1b > h1 {
     font-size: 1.5vmax;
     font-weight: 600;
-    color: #EFEAE3;
+    color: var(--secondary-color);
     line-height: 1.2vmax;
     margin-bottom: 0.5vmax;
 }
@@ -117,7 +117,7 @@
 }
 
 #footer4 > textarea:focus {
-    outline: 2px solid #EFEAE3;
+    outline: 2px solid var(--secondary-color);
 }
 
 #footer4 > button {
@@ -128,15 +128,15 @@
     font-size: 0.75vmax;
     cursor: pointer;
     width: fit-content;
-    background-color: #EFEAE3;
+    background-color: var(--secondary-color);
     color: #000;
     transition: 0.2s;
 }
 
 #footer4 > button:hover {
     background-color: transparent;
-    color: #EFEAE3;
-    outline: 2px solid #EFEAE3;
+    color: var(--secondary-color);
+    outline: 2px solid var(--secondary-color);
 }
 
 #footer-bottom {

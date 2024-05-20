@@ -12,11 +12,39 @@ html, body {
     width: 100%;
 }
 
-*::selection {
-    background-color: #FE330A;
-    color: #EFEAE3;
+:root {
+    --primary-color: #111c4d;
+    --primary-color-dark: #002a38;
+    --primary-color-fade: #090e2149;
+    --primary-color-fade2: #090e2128;
+    --secondary-color: #95def7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: var(--primary-color);
+    border-radius: 100vmax;
 }
 
 body {
-    background-color: #EFEAE3;
+    scrollbar-width: 10px;
 }
+
+*::selection {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+

@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import Navbar from '../components/Navbar';
 import './HomePage.css';
 import heroSectionWallpaper from '../assets/hero_wallpaper.png';
@@ -17,11 +18,19 @@ import ScleralLensAdjustment from '../assets/6.png';
 import PostSurgerySupport from '../assets/7.png';
 import EyeImage from '../assets/eye.webp';
 import Footer from '../components/Footer';
+import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import Game1 from '../assets/game1.jpg';
+import { useForm } from 'react-hook-form';
+
+import { IoIosMail } from "react-icons/io";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
 
 const diseases = [
     {
         image: Amblyopia,
-        name: "Amblyopia",
+        name: "Amblyopia / Lazy Eyes",
         imagePosition: 'center',
         description: "Amblyopia, often called lazy eye, is a condition where one eye doesn't develop proper vision during childhood. This happens when the brain favors the stronger eye, causing the weaker eye to become blurry. It's most common in children under 7 and can lead to permanent vision loss if untreated. Causes include eye misalignment (strabismus), unequal eye strength, or blocked vision in one eye (cataract). Early diagnosis and treatment, often with patching the stronger eye, can strengthen the weaker eye's vision."
     },
@@ -33,21 +42,44 @@ const diseases = [
     },
     {
         image: EyeStrain,
-        name: "Eye strain",
+        name: "Eye Strain",
         imagePosition: 'center',
         description: "Eye strain is a temporary discomfort caused by focusing intensely for long periods, often on digital screens. It leads to tired, burning, or itchy eyes, blurred vision, headaches, and light sensitivity. While not serious, it can disrupt daily activities. Resting your eyes, blinking frequently, and taking breaks from screens can help prevent and ease symptoms."
     },
     {
         image: ScleralLensAdjustment,
-        name: "Scleral lens adjustment",
+        name: "Scleral Lens Adjustment",
         imagePosition: 'top',
         description: "Scleral lens adjustment is a meticulous process performed by an eye specialist to ensure a perfect fit. It involves fine-tuning the lens diameter, base curve, and edge design to comfortably vault over the cornea and rest on the sclera. This creates a tear reservoir for optimal vision correction while ensuring proper clearance to avoid irritation or blood flow blockage on the eye's surface. The goal is to achieve a secure, comfortable lens that provides clear vision and long-term eye health benefits."
     },
     {
         image: PostSurgerySupport,
-        name: "Post surgery support",
+        name: "Post Surgery Support",
         imagePosition: 'top',
         description: "Post-surgery support encompasses all the care a patient receives after surgery to ensure a smooth recovery. This includes meticulous wound care, pain management through medication and strategies, physical therapy for regaining strength and mobility, and emotional support from healthcare professionals, family, or home care services, depending on the surgery's complexity and the patient's individual needs. This comprehensive support system plays a crucial role in maximizing healing, preventing complications, and facilitating a successful return to daily life."
+    }
+];
+
+const games = [
+    {
+        name: '',
+        image: Game1
+    },
+    {
+        name: '',
+        image: Game1
+    },
+    {
+        name: '',
+        image: Game1
+    },
+    {
+        name: '',
+        image: Game1
+    },
+    {
+        name: '',
+        image: Game1
     }
 ];
 
@@ -88,19 +120,33 @@ const heroSectionStyling = {
     backgroundPosition: "center"
 };
 
+
 function HomePage() {
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
     return (
         <div id="home-page" style={heroSectionStyling}>
             <Navbar />
             <div id="hero-section">
                 <div id="hero-gradient-layer">
                     <h1>HEALTHY EYES, HAPPY YOU</h1>
-                    <p>{"Perfect Vision offers a captivating and highly effective method for addressing vision problems. This innovative solution involves playing interactive games on a tablet or computer that you already own, eliminating the need for any extra equipment."}</p>
+                    <h2>See the Difference with Simple Vision Training</h2>
+                    <Link className='link' to={'/how-it-works'}><button><p>Your Path to Perfect Vision <FaArrowRight /></p></button></Link>
+                    {/* <p>Innovative solutions for clear vision.</p> */}
+                </div>
+            </div>
+            <div id="page1">
+                <h1><span>Revitalize</span> Your Vision<br />with Perfect Vision Innovative Home-Based Therapy</h1>
+                <div id="cards-container">
+                    {diseases.map((disease, index) => (
+                        <div key={index} className="page2-card">
+                            <div className="page2-card-masker"></div>
+                            <h1>{disease.name}</h1>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div id="page2">
-                <h1>Clear Vision, Brighter Future with Perfect Vision!</h1>
-                <p>Perfect Vision offers an excellent solution for addressing vision problems such as:</p>
                 <div id="swiper-div">
                     <div id="swiper-div-gradient-layer" />
                     <Swiper
@@ -119,21 +165,10 @@ function HomePage() {
                         modules={[EffectCoverflow, Pagination]}
                         className="mySwiper"
                     >
-                        {diseases.map((disease, index) => (
-                            <SwiperSlide className='mySwiperSlide' style={{ backgroundImage: `url(${disease.image})`, backgroundRepeat: 'no-repeat', backgroundPosition: `${disease.imagePosition}`, backgroundSize: 'cover', display: 'flex' }} key={index}>
-                                {/* <div className="slide-left">
-                                    <div className="slide-image-container">
-                                        <img src={disease.image} alt={disease.name} />
-                                    </div>
-                                </div>
-                                <div className="slide-right">
-                                    <h1>{disease.name}</h1>
-                                    <p>{disease.description}</p>
-                                </div> */}
-
+                        {games.map((game, index) => (
+                            <SwiperSlide className='mySwiperSlide' style={{ backgroundImage: `url(${game.image})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex' }} key={index}>
                                 <div className="swiperSlideMasker">
-
-                                    <h1>{disease.name}</h1>
+                                    <h1>{game.name}</h1>
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -158,7 +193,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="box box2">
-                        <div className="box-up">
+                            <div className="box-up">
                                 <p>Roughly</p>
                             </div>
                             <div className="box-down">
@@ -173,8 +208,8 @@ function HomePage() {
                     </div>
                 </div>
                 <div id="page3-right">
-                    <h4>See the Difference with Simple Vision Training</h4>
-                    <h1>Tired of blurry vision holding you back?</h1>
+                    <h4>Innovative Solutions for Clear Vision</h4>
+                    <h1>Tired of Blurry Vision Holding you Back?</h1>
                     <ol>
                         <li>Ditch the eye doctor visits and strengthen your vision from the comfort of your couch! Perfect Vision uses fun and interactive games to tackle common vision problems like lazy eye, crossed eyes, and double vision. Just a few minutes a day playing these games at home can help you see better, just like thousands of others who have trusted Perfect Vision to improve their sight.</li>
                     </ol>
@@ -208,6 +243,57 @@ function HomePage() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </div>
+            <div id="page5">
+                <div id="contact-section">
+                    <div id="contact-body">
+                        <div id="contact-form">
+                            <h1>Get in touch</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, sint?</p>
+                            <form method="POST" noValidate onSubmit={handleSubmit((formData) => {
+                                console.log({ formData });
+                                reset();
+                            })}>
+                                <div className="contact-row">
+                                    <input type="text" id="name" {...register('name', { required: "Enter your name please" })} placeholder="Enter your name here" />
+                                    {errors.name && <p className="error-msg">{errors.name.message}</p>}
+                                </div>
+                                <div className="contact-row">
+                                    <input type="text" id="email" {...register('email', { required: "Enter your email please", pattern: { value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi, message: 'Please enter a valid email address' } })} placeholder="Enter your email here" />
+                                    {errors.email && <p className="error-msg">{errors.email.message}</p>}
+                                </div>
+                                <div className="contact-row">
+                                    <textarea type="text" id="query" {...register('query', { required: "Enter your query please" })} rows={4} placeholder="Enter your query here" />
+                                    {errors.query && <p className="error-msg">{errors.query.message}</p>}
+                                </div>
+                                <div className="submitSection">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="contact-cover">
+                            <h1>Contact us</h1>
+                            <div className="touch-row">
+                                <div className="touch-icon">
+                                    <FaMapMarkerAlt className="icon" />
+                                </div>
+                                <div className="touch-content">Building 11, Madini,<br /> New Delhi - 110046</div>
+                            </div>
+                            <div className="touch-row">
+                                <div className="touch-icon">
+                                    <IoCall className="icon" />
+                                </div>
+                                <div className="touch-content">+91 81278 81938</div>
+                            </div>
+                            <div className="touch-row">
+                                <div className="touch-icon">
+                                    <IoIosMail className="icon" />
+                                </div>
+                                <div className="touch-content">perfectvision@gmail.com</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

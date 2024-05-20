@@ -1,7 +1,7 @@
 #about-page {
     height: 100vh;
     width: 100%;
-    background-color: #EFEAE3;
+    background-color: var(--secondary-color);
 }
 
 #about-section {
@@ -31,14 +31,14 @@
     font-size: 3.5vmax;
     font-weight: 800;
     margin-bottom: 1vmax;
-    color: #FE330A;
+    color: var(--primary-color);
 }
 
 #about-left > .about-top > h2 {
     font-size: 1.2vmax;
     font-weight: 600;
     letter-spacing: 10px;
-    color: #fe330a75;
+    color: var(--primary-color-fade);
 }
 
 #about-left > .about-top > p {
@@ -79,7 +79,7 @@
     font-size: 3.5vmax;
     font-weight: 800;
     margin-bottom: 1vmax;
-    color: #FE330A;
+    color: var(--primary-color);
 }
 
 #about-right > .about-top > h2 {
@@ -87,7 +87,7 @@
     font-weight: 600;
     margin-top: 5vmax;
     letter-spacing: 10px;
-    color: #fe330a75;
+    color: var(--primary-color-fade);
 }
 
 #about-right > .about-top > p {
